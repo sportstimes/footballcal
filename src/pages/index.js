@@ -18,10 +18,10 @@ const IndexPage = ({
   return (
     <Layout>
 
-      <SEO title="All Events" />
-      <h1>All Events</h1>
+      <SEO title="All Games" />
+      <h1>All Games</h1>
 
-  		<p>
+  		<p style={{border:'2px solid rgba(0,0,0,0.5)',padding:'1rem'}}>
         <span role="img" aria-label="Spiral calendar">🗓</span> 
         <a href="webcal://kickofftimestemplate.netlify.com/events.ics" className="ics">Subscribe to all event times in iOS, MacOS and Office</a>
         <small
