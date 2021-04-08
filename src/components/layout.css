@@ -40,8 +40,9 @@ template {
   display: none;
 }
 a {
-  background-color: rgba(0,0,0,0.8);
+  background-color: rgba(0,0,0,0.7);
   color: rgb(225, 230, 225);
+  padding: 0.25rem;
   text-decoration: none;
   -webkit-text-decoration-skip: objects;
 }
@@ -205,7 +206,7 @@ body {
   text-align: center;
   background: rgb(100, 230, 100);
   color: rgba(30, 30, 30, 0.8);
-  font-family: Impact, Helvetica, sans-serif;
+  font-family: Helvetica, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
