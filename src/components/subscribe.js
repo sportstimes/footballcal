@@ -1,5 +1,4 @@
 //import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
 
 const Subscribe = ({ siteTitle }) => (
@@ -24,13 +23,5 @@ const Subscribe = ({ siteTitle }) => (
       </p>
   </div>
 )
-
-Subscribe.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Subscribe.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Subscribe
