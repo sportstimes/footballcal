@@ -26,7 +26,7 @@ const IndexPage = ({
 
       <p>
         <span role="img" aria-label="Spiral calendar">🗓</span> 
-        <a href="webcal://rugbyworldcuptimes.com/events.ics" className="ics">Subscribe to ALL match times in your iOS, MacOS and Office calendar</a> 
+        <a href="webcal://footballcal.com/events.ics" className="ics">Subscribe to ALL game times in your iOS, MacOS and Office calendar</a> 
         <small
           style={{
             display: `block`,
