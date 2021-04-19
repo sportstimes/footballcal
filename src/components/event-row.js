@@ -21,9 +21,6 @@ const EventRow = ({ post }) => (
       <td className="location">
         {post.frontmatter.locationName}
       </td>
-      <td className="description">
-        {post.excerpt}
-      </td>
   </tr>
 )
 
