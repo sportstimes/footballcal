@@ -13,6 +13,7 @@ export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const tags = frontmatter.tags 
+  const timeStatus = frontmatter.timeStatus
 
   return (
     <Layout>
@@ -24,6 +25,12 @@ export default function Template({ data }) {
           <p className="time">
             {Moment(frontmatter.date).format("hh:mma") + (frontmatter.endDate ? "-" + Moment(frontmatter.endDate).format("hh:mma") : "") }
           </p>
+          { 
+          timeStatus === 'unconfirmed' ? 
+          (
+            <p><strong>Unconfirmed</strong></p>
+          ) : ''
+          }          
           {LocalTimezone}
         <h2>Where?</h2>
         <p>{frontmatter.locationName}</p>
@@ -63,6 +70,7 @@ export const pageQuery = graphql`
         title
         locationName
         tags
+        timeStatus
       }
     }
   }
