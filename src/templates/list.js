@@ -25,7 +25,7 @@ const IndexPage = ({
       <SEO title={listHeader} />
       <h1>{listHeader}</h1>
 
-      {Subscribe}
+      <Subscribe/>
 
       {LocalTimezone}
 

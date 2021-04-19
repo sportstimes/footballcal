@@ -22,7 +22,7 @@ const IndexPage = ({
       <SEO title="All Games" />
       <h1>All Games</h1>
 
-      {Subscribe}
+      <Subscribe/>
       {LocalTimezone}
 
       <table>
