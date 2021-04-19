@@ -1,7 +1,7 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
 import EventRow from "../components/event-row"
-import LocalTimezone from "../components/local-timezone"
+import Subscribe from "../components/subscribe"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -24,26 +24,7 @@ const IndexPage = ({
       <SEO title={listHeader} />
       <h1>{listHeader}</h1>
 
-      <p>
-        <span role="img" aria-label="Spiral calendar">🗓</span> 
-        <a href="webcal://footballcal.com/events.ics" className="ics">Subscribe to ALL games in your iOS, MacOS and Office calendar</a> 
-        <small
-          style={{
-            display: `block`,
-          }}
-        >
-          or 
-          {` `}
-          <a href="https://support.google.com/calendar/answer/37100?hl=en"
-            style={{
-              textDecoration: `underline`,
-              background: `none`,
-              color: `rgba(255,255,255,0.8)`
-            }}>Google Calendar</a>
-        </small>
-      </p>
-
-      {LocalTimezone}
+      <Subscribe/>
 
       <table>
         <thead>
@@ -57,6 +38,7 @@ const IndexPage = ({
           {Events}
         </tbody>
       </table>
+
       <p>
         <Link to="/">All matches</Link>
       </p>
