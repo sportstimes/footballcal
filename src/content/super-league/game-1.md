@@ -7,4 +7,8 @@ path: /super-league/game-1/
 tags: ["Super League", "Manchester United", "Liverpool", "Manchester City", "Arsenal", "Chelsea", "Tottenham", "Real Madrid", "Barcelona", "Atlético Madrid", "Juventus", "AC Milan", "Inter Milan"]
 ---
 
-The first game of the European Super League.
+Plaecholder for the first game of the new **European Super League**, planned to start mid-August.
+
+Calendars will be updated once fixtures are confirmed. 
+
+If you want to get an email when calendars are available, [sign up to our newsletter](http://eepurl.com/hvtz2b).
