@@ -2,7 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import EventRow from "../components/event-row"
 import Subscribe from "../components/subscribe"
-import LocalTimezone from "../components/local-timezone"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -27,8 +26,6 @@ const IndexPage = ({
 
       <Subscribe/>
 
-      {LocalTimezone}
-
       <table>
         <thead>
           <tr>
@@ -41,6 +38,7 @@ const IndexPage = ({
           {Events}
         </tbody>
       </table>
+
       <p>
         <Link to="/">All matches</Link>
       </p>

@@ -1,7 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
 import EventRow from "../components/event-row"
-import LocalTimezone from "../components/local-timezone"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -23,7 +22,6 @@ const IndexPage = ({
       <h1>All Games</h1>
 
       <Subscribe/>
-      {LocalTimezone}
 
       <table>
         <thead>
