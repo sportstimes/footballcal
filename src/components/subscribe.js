@@ -17,7 +17,7 @@ const Subscribe = ({ siteTitle }) => (
             style={{
               textDecoration: `underline`,
               background: `none`,
-              color: `rgba(255,255,255,0.8)`
+              color: `rgba(0,0,0,0.8)`
             }}>Google Calendar</a>
         </small>      
       </p>
