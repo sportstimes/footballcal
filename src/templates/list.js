@@ -40,7 +40,7 @@ const IndexPage = ({
       </table>
 
       <p>
-        <Link to="/">All matches</Link>
+        <Link to="/">All games</Link>
       </p>
      </Layout>
   )
