@@ -1,6 +1,6 @@
 ---
 title: Italy v Wales
-date: 2021-0620T17:00Z
+date: 2021-06-20T17:00Z
 endDate: 2021-06-20T18:50Z
 locationName: Rome
 path: /euro-2020/italy-wales/

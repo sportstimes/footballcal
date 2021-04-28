@@ -1,6 +1,6 @@
 ---
 title: Sweden v Poland
-date: 2021-0623T17:00Z
+date: 2021-06-23T17:00Z
 endDate: 2021-06-23T18:50Z
 locationName: St Petersburg
 path: /euro-2020/sweden-poland/

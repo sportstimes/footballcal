@@ -1,6 +1,6 @@
 ---
 title: Russia v Denmark
-date: 2021-0621T20:00Z
+date: 2021-06-21T20:00Z
 endDate: 2021-06-21T21:50Z
 locationName: Copenhagen
 path: /euro-2020/russia-denmark/

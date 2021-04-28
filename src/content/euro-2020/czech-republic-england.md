@@ -1,6 +1,6 @@
 ---
 title: Czech Republic v England
-date: 2021-0622T20:00Z
+date: 2021-06-22T20:00Z
 endDate: 2021-06-22T21:50Z
 locationName: London
 path: /euro-2020/czech-republic-england/
