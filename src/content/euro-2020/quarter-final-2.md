@@ -3,7 +3,7 @@ title: Knockout 4 Winner v Knockout 2 Winner
 date: 2021-07-02T20:00Z
 endDate: 2021-07-02T21:50Z
 locationName: Munich
-path: /euro-2020/qf-2/
+path: /euro-2020/quarter-final-2/
 tags: ["Munich", "Knockout", "Quarter Final", "EURO 2020"]
 ---
 
