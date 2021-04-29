@@ -1,9 +1,9 @@
 ---
 title: Group A 1st v Group C 2nd
-date: 2021-06-27T20:00Z
-endDate: 2021-06-27T21:50Z
+date: 2021-06-26T20:00Z
+endDate: 2021-06-26T21:50Z
 locationName: London
-path: /euro-2020/A1-C2/
+path: /euro-2020/knockout-2/
 tags: ["London", "Group A", "Group C", "Knockout", "Group of 16", "EURO 2020"]
 ---
 

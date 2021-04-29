@@ -1,9 +1,9 @@
 ---
-title: Group C 1st v Group D/E/F 3rd
+title: Group B 1st v Group A/D/E/F 3rd
 date: 2021-06-27T20:00Z
 endDate: 2021-06-27T21:50Z
 locationName: Seville
-path: /euro-2020/B1-ADEF3/
+path: /euro-2020/knockout-4/
 tags: ["Seville", "Group A", "Group B", "Group D", "Group E", "Group F", "Knockout", "Group of 16", "EURO 2020"]
 ---
 

@@ -3,7 +3,7 @@ title: Group D 1st v Group F 2nd
 date: 2021-06-29T17:00Z
 endDate: 2021-06-29T18:50Z
 locationName: London
-path: /euro-2020/1D-F2/
+path: /euro-2020/knockout-7/
 tags: ["London", "Group D", "Group F", "Knockout", "Group of 16", "EURO 2020"]
 ---
 

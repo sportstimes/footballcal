@@ -3,7 +3,7 @@ title: Group C 1st v Group D/E/F 3rd
 date: 2021-06-27T17:00Z
 endDate: 2021-06-27T18:50Z
 locationName: Budapest
-path: /euro-2020/C1-DEF3/
+path: /euro-2020/knockout-3/
 tags: ["Budapest", "Group C", "Group D", "Group E", "Group F", "Knockout", "Group of 16", "EURO 2020"]
 ---
 

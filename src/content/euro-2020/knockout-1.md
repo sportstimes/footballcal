@@ -3,7 +3,7 @@ title: Group A 2nd v Group B 2nd
 date: 2021-06-26T17:00Z
 endDate: 2021-06-26T18:50Z
 locationName: Amsterdam
-path: /euro-2020/A2-B2/
+path: /euro-2020/knockout-1/
 tags: ["Amsterdam", "Group A", "Group B", "Knockout", "Group of 16", "EURO 2020"]
 ---
 
