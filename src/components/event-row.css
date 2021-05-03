@@ -1,3 +1,7 @@
+td.datetime {
+    border-right: 4px solid;
+}
+
 tr.past {
     opacity: 0.4;
 }
