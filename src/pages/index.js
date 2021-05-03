@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import EventRow from "../components/event-row"
 
 import Layout from "../components/layout"
@@ -23,27 +23,10 @@ const IndexPage = ({
 
       <Subscribe/>
 
-      <table>
-        <thead>
-          <tr>
-            <th>When</th>
-            <th>Summary</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Events}
-        </tbody>
-      </table>
-      <p>
-        <span role="img" aria-label="Download">⬇️</span>
-        Export as 
-        {` `}
-        <a href="/events.ics" className="ics" download="download">ICS</a>,
-        {` `}
-        <a href="/feed.xml" className="rss">RSS feed</a>
-        {` and `}
-        <a href="/events.csv" className="csv" download="download">CSV file</a>
-      </p>
+      <ul>
+        <li><Link href="/euro-2020/">EURO 2020</Link></li>
+      </ul>
+
      </Layout>
   )
 }
