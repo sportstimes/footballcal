@@ -40,15 +40,14 @@ template {
   display: none;
 }
 a {
-  background-color: rgba(0,0,0,0.7);
-  color: rgb(225, 230, 225);
-  padding: 0.25rem;
+  color: rgb(0,0,0);
   text-decoration: none;
+  border-bottom: 4px solid #000;
   -webkit-text-decoration-skip: objects;
 }
 a:active,
 a:hover {
-  background-color: rgba(0,0,0,1);
+  border-bottom-width: 1px;
   outline-width: 0;
 }
 abbr[title] {
@@ -204,7 +203,7 @@ html {
 }
 body {
   text-align: center;
-  background: rgb(100, 230, 100);
+  background: rgb(80, 200, 80);
   color: rgba(30, 30, 30, 0.8);
   font-family: Helvetica, sans-serif;
   font-weight: normal;
