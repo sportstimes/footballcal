@@ -515,10 +515,12 @@ abbr[title] {
 thead {
   text-align: left;
 }
+tr:hover {
+ background: #FFF;
+}
 td,
 th {
   text-align: center;
-  border-bottom: 1px solid hsla(0, 0%, 0%, 0.12);
   font-feature-settings: "tnum";
   -moz-font-feature-settings: "tnum";
   -ms-font-feature-settings: "tnum";
