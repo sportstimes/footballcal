@@ -31,7 +31,6 @@ const IndexPage = ({
           <tr>
             <th>When</th>
             <th>Summary</th>
-            <th class="location">Where</th>
           </tr>
         </thead>
         <tbody>
