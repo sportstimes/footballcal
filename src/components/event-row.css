@@ -1,5 +1,13 @@
+tbody tr:hover {
+    background:rgba(0,0,0,1);
+    color: #FFF;
+}
+tbody tr:hover a {
+    color: #FFF;   
+}
+
 td.datetime {
-    border-right: 4px solid;
+    border-right: 5px solid rgba(0,0,0,0.8);
 }
 
 tr.past {
