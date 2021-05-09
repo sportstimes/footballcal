@@ -18,8 +18,8 @@ const IndexPage = ({
   return (
     <Layout>
 
-      <SEO title="All Games" />
-      <h1>All Games</h1>
+      <SEO title="All Competitions" />
+      <h1>Competitions</h1>
 
       <Subscribe/>
 
