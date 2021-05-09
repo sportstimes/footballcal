@@ -23,7 +23,7 @@ const IndexPage = ({
       <SEO title="All Competitions" />
       <h1>Competitions</h1>
 
-      <ul>
+      <ul className="competitions">
         <li>
           <Link to="/euro-2020/">
             <h2>EURO 2020</h2>
