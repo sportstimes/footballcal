@@ -1,14 +1,38 @@
+tbody tr:hover {
+    background:rgba(0,0,0,1);
+    color: #FFF;
+}
+tbody tr:hover a {
+    color: #FFF;   
+}
+
+td.datetime {
+    border-right: 5px solid rgba(0,0,0,0.8);
+}
+
 tr.past {
     opacity: 0.4;
 }
 td {
     width: 25%;
+    position: relative;
 }
 
-time {
+time.dtstart {
     display: none;
 }
 
+time.dtend {
+    position: absolute;
+    top: 16px;
+    right: -15px;
+    height: 25px;
+    width: 25px;
+    background-color: #000;
+    border-radius: 50%;
+    display: inline-block;
+    text-indent: -999em;
+}
 .description span {
     display: block;
 }

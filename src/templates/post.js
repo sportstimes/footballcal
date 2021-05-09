@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Subscribe from "../components/subscribe"
 import LocalTimezone from "../components/local-timezone"
 
 // Utilities
@@ -17,13 +18,16 @@ export default function Template({ data }) {
 
   return (
     <Layout>
+
+      <Subscribe/>
+
       <SEO title={frontmatter.title} />
       <div className="event-post">
         <h1>{frontmatter.title}</h1>
         <h2>When?</h2>
           <p className="date">{Moment(frontmatter.date).format("dddd DD MMMM YYYY")}</p>
           <p className="time">
-            {Moment(frontmatter.date).format("hh:mma") + (frontmatter.endDate ? "-" + Moment(frontmatter.endDate).format("hh:mma") : "") }
+            {Moment(frontmatter.date).format("h:mma") + (frontmatter.endDate ? "–" + Moment(frontmatter.endDate).format("h:mma") : "") }
           </p>
           { 
           timeStatus === 'unconfirmed' ? 

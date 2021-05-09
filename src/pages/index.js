@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import EventRow from "../components/event-row"
 
 import Layout from "../components/layout"
@@ -18,33 +18,20 @@ const IndexPage = ({
   return (
     <Layout>
 
-      <SEO title="All Games" />
-      <h1>All Games</h1>
-
       <Subscribe/>
 
-      <table>
-        <thead>
-          <tr>
-            <th>Summary</th>
-            <th>When</th>
-            <th class="location">Where</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Events}
-        </tbody>
-      </table>
-      <p>
-        <span role="img" aria-label="Download">⬇️</span>
-        Export as 
-        {` `}
-        <a href="/events.ics" className="ics" download="download">ICS</a>,
-        {` `}
-        <a href="/feed.xml" className="rss">RSS feed</a>
-        {` and `}
-        <a href="/events.csv" className="csv" download="download">CSV file</a>
-      </p>
+      <SEO title="All Competitions" />
+      <h1>Competitions</h1>
+
+      <ul className="competitions">
+        <li>
+          <Link to="/euro-2020/">
+            <h2>EURO 2020</h2>
+            <p>11 Jun–11 Jul 2021</p>
+          </Link>
+        </li>
+      </ul>
+
      </Layout>
   )
 }

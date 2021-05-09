@@ -161,7 +161,7 @@ module.exports = {
   {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
-      trackingId: "UA-91583-61",
+      trackingId: "G-GW8D58EZP3",
       // Defines where to place the tracking script - `true` in the head and `false` in the body
       head: false,
       // Setting this parameter is optional
@@ -172,7 +172,7 @@ module.exports = {
       pageTransitionDelay: 0,
       sampleRate: 5,
       siteSpeedSampleRate: 10,
-      cookieDomain: "rugbyworldcuptimes.com",
+      cookieDomain: "footballcal.com",
     },
   },
 

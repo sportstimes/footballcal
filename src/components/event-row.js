@@ -6,11 +6,8 @@ import "./event-row.css"
 
 const EventRow = ({ post }) => (
   <tr id={'Match' + post.id} className={ "vevent" }>
-      <td className="summary">
-        <Link className="url" to={post.frontmatter.path}>{post.frontmatter.title}</Link>
-      </td>
-      <td>
-        {moment(post.frontmatter.date).format("ddd DD MMM HH:mm")}
+      <td className="datetime">
+        {moment(post.frontmatter.date).format("ddd DD MMM h:mma")}
         <time className="dtstart">
           {moment(post.frontmatter.date).format("YYYY-MM-DDTHH:mm:ssZ")}
         </time>
@@ -18,8 +15,8 @@ const EventRow = ({ post }) => (
           {moment(post.frontmatter.date).add(1, 'hour').format("YYYY-MM-DDTHH:mm:ssZ")}
         </time>
       </td>
-      <td className="location">
-        {post.frontmatter.locationName}
+      <td className="summary">
+        <Link className="url" to={post.frontmatter.path}>{post.frontmatter.title}</Link>
       </td>
   </tr>
 )
