@@ -7,7 +7,7 @@ import "./event-row.css"
 const EventRow = ({ post }) => (
   <tr id={'Match' + post.id} className={ "vevent" }>
       <td className="datetime">
-        {moment(post.frontmatter.date).format("ddd DD MMM HH:mm")}
+        {moment(post.frontmatter.date).format("ddd DD MMM h:mma")}
         <time className="dtstart">
           {moment(post.frontmatter.date).format("YYYY-MM-DDTHH:mm:ssZ")}
         </time>
