@@ -18,10 +18,10 @@ const IndexPage = ({
   return (
     <Layout>
 
+      <Subscribe/>
+
       <SEO title="All Competitions" />
       <h1>Competitions</h1>
-
-      <Subscribe/>
 
       <ul>
         <li><Link href="/euro-2020/">EURO 2020</Link></li>
