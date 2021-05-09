@@ -13,7 +13,7 @@ export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const tags = frontmatter.tags 
-  const timeStatus = frontmatter.timeStatus
+  const timeStatus = frontmatter.timeStatus || ''
 
   return (
     <Layout>
@@ -70,7 +70,6 @@ export const pageQuery = graphql`
         title
         locationName
         tags
-        timeStatus
       }
     }
   }
