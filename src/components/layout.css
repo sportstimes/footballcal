@@ -517,9 +517,6 @@ abbr[title] {
 thead {
   text-align: left;
 }
-tr:hover {
- background: #FFF;
-}
 td,
 th {
   text-align: center;
