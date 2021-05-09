@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Subscribe from "../components/subscribe"
 import LocalTimezone from "../components/local-timezone"
 
 // Utilities
@@ -17,6 +18,9 @@ export default function Template({ data }) {
 
   return (
     <Layout>
+
+      <Subscribe/>
+
       <SEO title={frontmatter.title} />
       <div className="event-post">
         <h1>{frontmatter.title}</h1>
