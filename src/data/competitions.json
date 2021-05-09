@@ -1,0 +1,10 @@
+{
+    "competitions" : [
+        {
+            "name" : "EURO 2020",
+            "directory" : "euro-2020",
+            "startDate" : "2021-06-11",
+            "endDate" : "2021-07-11"
+        }
+    ]
+}
