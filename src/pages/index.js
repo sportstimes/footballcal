@@ -25,7 +25,7 @@ const IndexPage = ({
 
       <ul>
         <li>
-          <Link href="/euro-2020/">
+          <Link to="/euro-2020/">
             <h2>EURO 2020</h2>
             <p>11 Jun–11 Jul 2021</p>
           </Link>
