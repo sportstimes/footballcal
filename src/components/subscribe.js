@@ -3,7 +3,7 @@ import React from "react"
 
 const Subscribe = ({ siteTitle }) => (
   <div>
-  		<p style={{border:'2px solid rgba(0,0,0,0.5)',padding:'1rem'}}>
+  		<p>
         <span role="img" aria-label="Spiral calendar">🗓</span> 
         <a href="webcal://footballcal.com/events.ics" className="ics">Subscribe to all games in iOS, MacOS and Office</a>
         <small

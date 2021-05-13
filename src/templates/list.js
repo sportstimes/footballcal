@@ -21,17 +21,16 @@ const IndexPage = ({
   
   return (
     <Layout>
+      <Subscribe/>
+
       <SEO title={listHeader} />
       <h1>{listHeader}</h1>
-
-      <Subscribe/>
 
       <table>
         <thead>
           <tr>
-            <th>Summary</th>
             <th>When</th>
-            <th class="location">Where</th>
+            <th>Summary</th>
           </tr>
         </thead>
         <tbody>
