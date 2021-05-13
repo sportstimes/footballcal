@@ -134,7 +134,8 @@ exports.onPostBuild = async ({ graphql }) => {
         description: node.excerpt,
         location: node.frontmatter.locationName,
         url: result.data.siteMeta.siteMetadata.siteUrl + node.fields.slug,
-        status: 'CONFIRMED'
+        status: 'CONFIRMED',
+        categories: node.frontmatter.tags,
       }
       if(node.frontmatter.endDate) {
         event.end = moment(node.frontmatter.endDate).format('YYYY-M-D-H-m').split("-")
