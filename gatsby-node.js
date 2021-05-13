@@ -90,6 +90,7 @@ exports.onPostBuild = async ({ graphql }) => {
   const ics = require(`ics`)
   const moment = require(`moment`)
   let events = []
+  let tagEvents = []
 
   const result = await graphql(`
   {
@@ -104,6 +105,7 @@ exports.onPostBuild = async ({ graphql }) => {
             date
             endDate
             locationName
+            tags
           }
           fields {
             slug
@@ -133,7 +135,7 @@ exports.onPostBuild = async ({ graphql }) => {
       description: node.excerpt,
       location: node.frontmatter.locationName,
       url: result.data.siteMeta.siteMetadata.siteUrl + node.fields.slug,
-      status: 'CONFIRMED',
+      status: 'CONFIRMED'
     }
     if(node.frontmatter.endDate) {
       event.end = moment(node.frontmatter.endDate).format('YYYY-M-D-H-m').split("-")
@@ -141,6 +143,10 @@ exports.onPostBuild = async ({ graphql }) => {
       event.duration = { hours: 1, minutes: 0 }
     }
     events.push(event)
+    
+    if(node.frontmatter.tags.includes('England')) {
+      tagEvents.push(event)
+    }
   })
   
   ics.createEvents(events, (error, value) => {
@@ -148,10 +154,20 @@ exports.onPostBuild = async ({ graphql }) => {
       console.log(error)
       throw new Error("ICS generation fail, see console output above")
     }
-  
+    
     //console.log(value)  
     writeFileSync(`${__dirname}/public/events.ics`, value)
+    
+  })
+  
+  ics.createEvents(tagEvents, (error, value) => {
+    if (error) {
+      console.log(error)
+      throw new Error("ICS generation fail, see console output above")
+    }
+  
+    //console.log(value)  
+    writeFileSync(`${__dirname}/public/england.ics`, value)
 
   })
-
 }
