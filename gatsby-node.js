@@ -85,12 +85,13 @@ const { writeFileSync } = require(`fs`)
 
 exports.onPostBuild = async ({ graphql }) => {
   
-  console.log('Generating ICS……');
+  console.log('Generating ICS…');
   
   const ics = require(`ics`)
   const moment = require(`moment`)
   let events = []
   let tagEvents = []
+  let tags = ['England']
 
   const result = await graphql(`
   {
@@ -144,7 +145,7 @@ exports.onPostBuild = async ({ graphql }) => {
     }
     events.push(event)
     
-    if(node.frontmatter.tags.includes('England')) {
+    if(node.frontmatter.tags.includes(tags[0])) {
       tagEvents.push(event)
     }
   })
@@ -167,7 +168,7 @@ exports.onPostBuild = async ({ graphql }) => {
     }
   
     //console.log(value)  
-    writeFileSync(`${__dirname}/public/england.ics`, value)
+    writeFileSync(`${__dirname}/public/` + tags[0] + `.ics`, value)
 
   })
 }
