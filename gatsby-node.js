@@ -85,90 +85,99 @@ const { writeFileSync } = require(`fs`)
 
 exports.onPostBuild = async ({ graphql }) => {
   
-  console.log('Generating ICS…');
   
-  const ics = require(`ics`)
   const moment = require(`moment`)
   let events = []
   let tagEvents = []
-  let tags = ['England']
-
+  let tags = ['England', 'Scotland']
+  
   const result = await graphql(`
   {
     event: allMarkdownRemark(
       sort: { order: DESC, fields: [frontmatter___date] }
       limit: 1000
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            date
-            endDate
-            locationName
-            tags
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              date
+              endDate
+              locationName
+              tags
+            }
+            fields {
+              slug
+            }
+            excerpt
           }
-          fields {
-            slug
-          }
-          excerpt
+        }
+      }
+      siteMeta: site {
+        siteMetadata {
+          title
+          siteUrl
         }
       }
     }
-    siteMeta: site {
-      siteMetadata {
-        title
-        siteUrl
-      }
-    }
-  }
-  `)
-
-  if (result.errors) {
-    console.log(result.errors)
-    throw new Error("GraphQL fail, see console output above")
-  }
-
-  result.data.event.edges.forEach(({ node }) => {
-    let event = {
-      start: moment(node.frontmatter.date).format('YYYY-M-D-H-m').split("-"),
-      title: node.frontmatter.title,
-      description: node.excerpt,
-      location: node.frontmatter.locationName,
-      url: result.data.siteMeta.siteMetadata.siteUrl + node.fields.slug,
-      status: 'CONFIRMED'
-    }
-    if(node.frontmatter.endDate) {
-      event.end = moment(node.frontmatter.endDate).format('YYYY-M-D-H-m').split("-")
-    } else {
-      event.duration = { hours: 1, minutes: 0 }
-    }
-    events.push(event)
+    `)
     
-    if(node.frontmatter.tags.includes(tags[0])) {
-      tagEvents.push(event)
+    if (result.errors) {
+      console.log(result.errors)
+      throw new Error("GraphQL fail, see console output above")
     }
-  })
-  
+    
+    result.data.event.edges.forEach(({ node }) => {
+      let event = {
+        start: moment(node.frontmatter.date).format('YYYY-M-D-H-m').split("-"),
+        title: node.frontmatter.title,
+        description: node.excerpt,
+        location: node.frontmatter.locationName,
+        url: result.data.siteMeta.siteMetadata.siteUrl + node.fields.slug,
+        status: 'CONFIRMED'
+      }
+      if(node.frontmatter.endDate) {
+        event.end = moment(node.frontmatter.endDate).format('YYYY-M-D-H-m').split("-")
+      } else {
+        event.duration = { hours: 1, minutes: 0 }
+      }
+      events.push(event)
+      
+      tags.forEach(({ tagNode }) => {
+        if(node.frontmatter.tags.includes(tagNode)) {
+          tagEvents[tagNode].push(event)
+        }
+      })
+    })
+    
+    tags.forEach( tagNode => {
+      let tagIcs = require(`ics`)
+      console.log('Generating ' + tagNode + ' ICS…')  
+      tagIcs.createEvents(tagEvents[tagNode], (error, value) => {
+        if (error) {
+          console.log(error)
+          throw new Error("ICS generation fail, see console output above")
+        }
+        
+        console.log(value)  
+        writeFileSync(`${__dirname}/public/` + tagNode.toLowerCase + `.ics`, value)
+        console.log(tagNode.toLowerCase + `.ics created`)
+        
+      })
+      
+    })
+    
+  console.log('Generating global ICS…');
+  const ics = require(`ics`)
   ics.createEvents(events, (error, value) => {
     if (error) {
       console.log(error)
       throw new Error("ICS generation fail, see console output above")
     }
     
-    //console.log(value)  
     writeFileSync(`${__dirname}/public/events.ics`, value)
     
   })
   
-  ics.createEvents(tagEvents, (error, value) => {
-    if (error) {
-      console.log(error)
-      throw new Error("ICS generation fail, see console output above")
-    }
-  
-    //console.log(value)  
-    writeFileSync(`${__dirname}/public/` + tags[0] + `.ics`, value)
 
-  })
 }
