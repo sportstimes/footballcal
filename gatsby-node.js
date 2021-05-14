@@ -126,12 +126,6 @@ exports.onPostBuild = async ({ graphql }) => {
       throw new Error("GraphQL fail, see console output above")
     }
     
-    // tags.forEach(tag => {
-    //   tagEvents.(tag)
-    // })
-    // console.log('tagEvents',tagEvents);
-
-
     result.data.event.edges.forEach(({ node }) => {
       let event = {
         start: moment(node.frontmatter.date).format('YYYY-M-D-H-m').split("-"),
@@ -157,12 +151,6 @@ exports.onPostBuild = async ({ graphql }) => {
         }
       })
 
-      // tags.forEach(tag => {
-
-      //   if(node.frontmatter.tags.includes(tag)) {
-      //     tagEvents[tag].push(event)
-      //   }
-      // })
     })
 
     const ics = require(`ics`)
@@ -179,7 +167,6 @@ exports.onPostBuild = async ({ graphql }) => {
     })
     
     Object.keys(tagEvents).forEach( tagName => {
-
       console.log('Generating ' + tagName + ' ICS…')  
       ics.createEvents(tagEvents[tagName], (error, value) => {
         if (error) {
@@ -187,7 +174,6 @@ exports.onPostBuild = async ({ graphql }) => {
           throw new Error("ICS generation fail, see console output above")
         }
         
-        //console.log(value)  
         writeFileSync(`${__dirname}/public/` + tagName.toLowerCase() + `.ics`, value)
         console.log(tagName.toLowerCase() + `.ics created`)
         
