@@ -174,8 +174,10 @@ exports.onPostBuild = async ({ graphql }) => {
           throw new Error("ICS generation fail, see console output above")
         }
         
-        writeFileSync(`${__dirname}/public/` + tagName.toLowerCase() + `.ics`, value)
-        console.log(tagName.toLowerCase() + `.ics created`)
+        let filename = tagName.toLowerCase().replace(' ','-')
+        
+        writeFileSync(`${__dirname}/public/` + filename + `.ics`, value)
+        console.log(filename + `.ics created`)
         
       })
       
