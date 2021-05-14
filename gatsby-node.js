@@ -88,8 +88,7 @@ exports.onPostBuild = async ({ graphql }) => {
   
   const moment = require(`moment`)
   let events = []
-  let tagEvents = []
-  let tags = ['England', 'Scotland']
+  let tagEvents = {}
   
   const result = await graphql(`
   {
@@ -127,6 +126,12 @@ exports.onPostBuild = async ({ graphql }) => {
       throw new Error("GraphQL fail, see console output above")
     }
     
+    // tags.forEach(tag => {
+    //   tagEvents.(tag)
+    // })
+    // console.log('tagEvents',tagEvents);
+
+
     result.data.event.edges.forEach(({ node }) => {
       let event = {
         start: moment(node.frontmatter.date).format('YYYY-M-D-H-m').split("-"),
@@ -143,16 +148,26 @@ exports.onPostBuild = async ({ graphql }) => {
         event.duration = { hours: 1, minutes: 0 }
       }
       events.push(event)
-      
-      tags.forEach(({ tagNode }) => {
-        if(node.frontmatter.tags.includes(tagNode)) {
-          tagEvents[tagNode].push(event)
+
+      node.frontmatter.tags.forEach( tag => {
+        if(!tagEvents[tag]) {
+          tagEvents[tag] = [event]
+        } else {
+          tagEvents[tag] = [...tagEvents[tag], event]
         }
       })
+
+      // tags.forEach(tag => {
+
+      //   if(node.frontmatter.tags.includes(tag)) {
+      //     tagEvents[tag].push(event)
+      //   }
+      // })
     })
 
-    console.log('Generating global ICS…');
     const ics = require(`ics`)
+
+    console.log('Generating global ICS…');
     ics.createEvents(events, (error, value) => {
       if (error) {
         console.log(error)
@@ -160,21 +175,21 @@ exports.onPostBuild = async ({ graphql }) => {
       }
       
       writeFileSync(`${__dirname}/public/events.ics`, value)
-      console.log('/public/events.ics generated')
+      console.log('events.ics generated')
     })
     
-    tags.forEach( tagNode => {
-      let tagIcs = require(`ics`)
-      console.log('Generating ' + tagNode + ' ICS…')  
-      tagIcs.createEvents(tagEvents[tagNode], (error, value) => {
+    Object.keys(tagEvents).forEach( tagName => {
+
+      console.log('Generating ' + tagName + ' ICS…')  
+      ics.createEvents(tagEvents[tagName], (error, value) => {
         if (error) {
           console.log(error)
           throw new Error("ICS generation fail, see console output above")
         }
         
-        console.log(value)  
-        writeFileSync(`${__dirname}/public/` + tagNode.toLowerCase + `.ics`, value)
-        console.log(tagNode.toLowerCase + `.ics created`)
+        //console.log(value)  
+        writeFileSync(`${__dirname}/public/` + tagName.toLowerCase() + `.ics`, value)
+        console.log(tagName.toLowerCase() + `.ics created`)
         
       })
       
