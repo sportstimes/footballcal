@@ -13,12 +13,7 @@ const Subscribe = ({ tag }) => (
         >
           or 
           {` `}
-          <a href="https://support.google.com/calendar/answer/37100?hl=en"
-            style={{
-              textDecoration: `underline`,
-              background: `none`,
-              color: `rgba(0,0,0,0.8)`
-            }}>Google Calendar</a>
+          <a href="https://support.google.com/calendar/answer/37100?hl=en">Google Calendar</a>
         </small>      
       </p>
   </div>
