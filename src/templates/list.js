@@ -21,11 +21,11 @@ const IndexPage = ({
   
   return (
     <Layout>
-      <Subscribe tag={tag} />
 
       <SEO title={listHeader} />
       <h1>{listHeader}</h1>
 
+      <Subscribe tag={tag} />
       <table>
         <thead>
           <tr>
