@@ -1,19 +1,11 @@
 import React from "react"
 import { graphql, Link } from "gatsby"
-import EventRow from "../components/event-row"
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Subscribe from "../components/subscribe"
 
-const IndexPage = ({
-  data: {
-    allMarkdownRemark: { edges },
-  },
-}) => {
-  const Events = edges
-    .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <EventRow key={edge.node.id} post={edge.node} />)
+const IndexPage = () => {
 
   return (
     <Layout>
