@@ -135,6 +135,7 @@ exports.onPostBuild = async ({ graphql }) => {
         url: result.data.siteMeta.siteMetadata.siteUrl + node.fields.slug,
         status: 'CONFIRMED',
         categories: node.frontmatter.tags,
+        calName: 'Football Cal'
       }
       if(node.frontmatter.endDate) {
         event.end = moment(node.frontmatter.endDate).format('YYYY-M-D-H-m').split("-")
