@@ -21,7 +21,7 @@ const IndexPage = ({
   
   return (
     <Layout>
-      <Subscribe/>
+      <Subscribe tag={tag} />
 
       <SEO title={listHeader} />
       <h1>{listHeader}</h1>

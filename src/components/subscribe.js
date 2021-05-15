@@ -1,11 +1,11 @@
 //import { Link } from "gatsby"
 import React from "react"
 
-const Subscribe = ({ siteTitle }) => (
+const Subscribe = ({ tag }) => (
   <div>
   		<p>
         <span role="img" aria-label="Spiral calendar">🗓</span> 
-        <a href="webcal://footballcal.com/events.ics" className="ics">Subscribe to all games in iOS, MacOS and Office</a>
+        <a href={"webcal://footballcal.com/" + (tag ? tag.toLowerCase().replace(" ", "-") : "events") + ".ics"} className="ics">Subscribe to {tag || "all"} games in iOS, MacOS and Office</a>
         <small
           style={{
             display: `block`,
