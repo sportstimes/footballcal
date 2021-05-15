@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Football Cal`,
-    description: `Football times direct to your calendar`,
+    description: `Football dates and times direct to your calendar`,
     siteUrl: `https://footballcal.com`,
     author: `@si`,
   },
