@@ -1,7 +1,7 @@
 ---
 title: Group F 1st v Group A/B/C 3rd
-date: 2021-06-28T20:00Z
-endDate: 2021-06-28T21:50Z
+date: 2021-06-28T19:00Z
+endDate: 2021-06-28T20:50Z
 locationName: Bucharest
 path: /euro-2020/knockout-6/
 tags: ["Bucharest", "Group A", "Group B", "Group C", "Group F", "Knockout", "Group of 16", "EURO 2020"]

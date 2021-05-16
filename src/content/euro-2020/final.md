@@ -1,7 +1,7 @@
 ---
 title: Semi-Final 1 Winner v Semi-Final 2 Winner
-date: 2021-07-11T20:00Z
-endDate: 2021-07-11T21:50Z
+date: 2021-07-11T19:00Z
+endDate: 2021-07-11T20:50Z
 locationName: London
 path: /euro-2020/final/
 tags: ["London", "Knockout", "Final", "EURO 2020"]

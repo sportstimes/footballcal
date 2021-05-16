@@ -1,7 +1,7 @@
 ---
 title: Ukraine v Austria
-date: 2021-06-21T17:00Z
-endDate: 2021-06-21T18:50Z
+date: 2021-06-21T16:00Z
+endDate: 2021-06-21T17:50Z
 locationName: Bucharest
 path: /euro-2020/ukraine-austria/
 tags: ["Ukraine", "Austria", "Bucharest", "Group C", "Group stages","EURO 2020"]

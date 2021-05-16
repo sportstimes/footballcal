@@ -1,7 +1,7 @@
 ---
 title: Poland v Slovakia
-date: 2021-06-14T17:00Z
-endDate: 2021-06-14T18:50Z
+date: 2021-06-14T16:00Z
+endDate: 2021-06-14T17:50Z
 locationName: St Petersburg
 path: /euro-2020/poland-slovakia/
 tags: ["Poland", "Slovakia", "St Petersburg", "Group E", "Group stages","EURO 2020"]

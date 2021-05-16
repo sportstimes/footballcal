@@ -1,6 +1,6 @@
 ---
 title: Knockout 8 Winner v Knockout 7 Winner
-date: 2021-07-03T20:00Z
+date: 2021-07-03T19:00Z
 endDate: 2021-07-03T20:50Z
 locationName: Rome
 path: /euro-2020/quarter-final-4/

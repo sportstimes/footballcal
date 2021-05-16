@@ -1,7 +1,7 @@
 ---
 title: Quarter-Final 2 Winner v Quarter-Final 1 Winner
-date: 2021-07-06T20:00Z
-endDate: 2021-07-06T21:50Z
+date: 2021-07-06T19:00Z
+endDate: 2021-07-06T20:50Z
 locationName: London
 path: /euro-2020/semi-final-1/
 tags: ["London", "Knockout", "Semi Final", "EURO 2020"]

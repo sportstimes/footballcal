@@ -1,7 +1,7 @@
 ---
 title: Group D 2nd v Group E 2nd
-date: 2021-06-28T17:00Z
-endDate: 2021-06-28T18:50Z
+date: 2021-06-28T16:00Z
+endDate: 2021-06-28T17:50Z
 locationName: Copenhagen
 path: /euro-2020/knockout-5/
 tags: ["Copenhagen", "Group D", "Group E", "Knockout", "Group of 16", "EURO 2020"]

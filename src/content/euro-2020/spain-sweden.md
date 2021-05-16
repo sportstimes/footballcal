@@ -1,7 +1,7 @@
 ---
 title: Spain v Sweden
-date: 2021-06-14T20:00Z
-endDate: 2021-06-14T21:50Z
+date: 2021-06-14T19:00Z
+endDate: 2021-06-14T20:50Z
 locationName: Seville
 path: /euro-2020/spain-sweden/
 tags: ["Spain", "Sweden", "Seville", "Group E", "Group stages","EURO 2020"]

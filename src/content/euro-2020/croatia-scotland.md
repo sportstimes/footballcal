@@ -1,7 +1,7 @@
 ---
 title: Croatia v Scotland
-date: 2021-06-22T20:00Z
-endDate: 2021-06-22T21:50Z
+date: 2021-06-22T19:00Z
+endDate: 2021-06-22T20:50Z
 locationName: Glasgow
 path: /euro-2020/croatia-scotland/
 tags: ["Croatia", "Scotland", "Glasgow", "Group D", "Group stages","EURO 2020"]

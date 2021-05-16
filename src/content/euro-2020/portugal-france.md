@@ -1,7 +1,7 @@
 ---
 title: Portugal v France
-date: 2021-06-23T20:00Z
-endDate: 2021-06-23T21:50Z
+date: 2021-06-23T19:00Z
+endDate: 2021-06-23T20:50Z
 locationName: Budapest
 path: /euro-2020/portugal-france/
 tags: ["Portugal", "France", "Budapest", "Group F", "Group stages","EURO 2020"]

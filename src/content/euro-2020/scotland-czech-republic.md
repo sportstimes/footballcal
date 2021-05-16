@@ -1,7 +1,7 @@
 ---
 title: Scotland v Czech Republic
-date: 2021-06-14T14:00Z
-endDate: 2021-06-14T15:50Z
+date: 2021-06-14T13:00Z
+endDate: 2021-06-14T14:50Z
 locationName: Glasgow
 path: /euro-2020/scotland-czech-republic/
 tags: ["Scotland", "Czech Republic", "Glasgow", "Group D", "Group stages","EURO 2020"]

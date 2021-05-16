@@ -1,7 +1,7 @@
 ---
 title: Switzerland v Turkey
-date: 2021-06-20T17:00Z
-endDate: 2021-06-20T18:50Z
+date: 2021-06-20T16:00Z
+endDate: 2021-06-20T17:50Z
 locationName: Baku
 path: /euro-2020/switzerland-turkey/
 tags: ["Switzerland", "Turkey", "Baku", "Group A", "Group stages","EURO 2020"]

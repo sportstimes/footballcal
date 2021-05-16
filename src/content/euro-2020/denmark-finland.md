@@ -1,7 +1,7 @@
 ---
 title: Denmark v Finland
-date: 2021-06-12T17:00Z
-endDate: 2021-06-12T18:50Z
+date: 2021-06-12T16:00Z
+endDate: 2021-06-12T17:50Z
 locationName: Copenhagen
 path: /euro-2020/denmark-finland/
 tags: ["Denmark", "Finland", "Copenhagen", "Group B", "Group stages","EURO 2020"]

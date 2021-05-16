@@ -1,7 +1,7 @@
 ---
 title: Germany v Hungary
-date: 2021-06-23T20:00Z
-endDate: 2021-06-23T21:50Z
+date: 2021-06-23T19:00Z
+endDate: 2021-06-23T20:50Z
 locationName: Munich
 path: /euro-2020/germany-hungary/
 tags: ["Germany", "Hungary", "Munich", "Group F", "Group stages","EURO 2020"]

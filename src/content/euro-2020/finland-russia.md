@@ -1,7 +1,7 @@
 ---
 title: Finland v Russia
-date: 2021-06-16T14:00Z
-endDate: 2021-06-16T15:50Z
+date: 2021-06-16T13:00Z
+endDate: 2021-06-16T14:50Z
 locationName: St Petersburg
 path: /euro-2020/finland-russia/
 tags: ["Finland", "Russia", "St Petersburg", "Group B", "Group stages","EURO 2020"]

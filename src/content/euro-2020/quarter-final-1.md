@@ -1,7 +1,7 @@
 ---
 title: Knockout 6 Winner v Knockout 5 Winner
-date: 2021-07-02T17:00Z
-endDate: 2021-07-02T18:50Z
+date: 2021-07-02T16:00Z
+endDate: 2021-07-02T17:50Z
 locationName: St Petersburg
 path: /euro-2020/quarter-final-1/
 tags: ["St Petersburg", "Knockout", "Quarter Final", "EURO 2020"]

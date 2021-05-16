@@ -1,7 +1,7 @@
 ---
 title: North Macedonia v Netherlands
-date: 2021-06-21T17:00Z
-endDate: 2021-06-21T18:50Z
+date: 2021-06-21T16:00Z
+endDate: 2021-06-21T17:50Z
 locationName: Amsterdam
 path: /euro-2020/north-macedonia-netherlands/
 tags: ["North Macedonia", "Netherlands", "Amsterdam", "Group C", "Group stages","EURO 2020"]

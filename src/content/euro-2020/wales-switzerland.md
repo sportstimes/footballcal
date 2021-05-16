@@ -1,7 +1,7 @@
 ---
 title: Wales v Switzerland
-date: 2021-06-12T14:00Z
-endDate: 2021-06-12T15:50Z
+date: 2021-06-12T13:00Z
+endDate: 2021-06-12T14:50Z
 locationName: Baku
 path: /euro-2020/wales-switzerland/
 tags: ["Wales", "Switzerland", "Baku", "Group A", "Group stages","EURO 2020"]

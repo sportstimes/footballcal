@@ -1,7 +1,7 @@
 ---
 title: Hungary v Portugal
-date: 2021-06-15T17:00Z
-endDate: 2021-06-15T18:50Z
+date: 2021-06-15T16:00Z
+endDate: 2021-06-15T17:50Z
 locationName: Budapest
 path: /euro-2020/hungary-portugal/
 tags: ["Hungary", "Portugal", "Budapest", "Group F", "Group stages","EURO 2020"]

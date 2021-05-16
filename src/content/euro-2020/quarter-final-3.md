@@ -1,7 +1,7 @@
 ---
 title: Knockout 3 Winner v Knockout 1 Winner
-date: 2021-07-03T17:00Z
-endDate: 2021-07-03T18:50Z
+date: 2021-07-03T16:00Z
+endDate: 2021-07-03T17:50Z
 locationName: Baku
 path: /euro-2020/quarter-final-3/
 tags: ["Baku", "Knockout", "Quarter Final", "EURO 2020"]

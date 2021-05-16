@@ -1,7 +1,7 @@
 ---
 title: Netherlands v Austria
-date: 2021-06-17T20:00Z
-endDate: 2021-06-17T21:50Z
+date: 2021-06-17T19:00Z
+endDate: 2021-06-17T20:50Z
 locationName: Amsterdam
 path: /euro-2020/netherlands-austria/
 tags: ["Netherlands", "Austria", "Amsterdam", "Group C", "Group stages","EURO 2020"]
