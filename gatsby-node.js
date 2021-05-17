@@ -125,6 +125,8 @@ exports.onPostBuild = async ({ graphql }) => {
       console.log(result.errors)
       throw new Error("GraphQL fail, see console output above")
     }
+
+    const ics = require(`ics`)
     
     result.data.event.edges.forEach(({ node }) => {
       let event = {
@@ -151,9 +153,20 @@ exports.onPostBuild = async ({ graphql }) => {
         }
       })
 
+      console.log('Generating event ICS…');
+      ics.createEvent(event, (error, value) => {
+        if (error) {
+          console.log(error)
+          throw new Error("ICS generation fail, see console output above")
+        }
+        
+        let filename = node.fields.slug.slice(0, -1) + '.ics'
+        writeFileSync(`${__dirname}/public/` + filename, value)
+        console.log(filename + ` created`)
+      })
+
     })
 
-    const ics = require(`ics`)
 
     console.log('Generating global ICS…');
     ics.createEvents(events, (error, value) => {
