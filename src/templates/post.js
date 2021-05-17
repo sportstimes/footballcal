@@ -19,7 +19,7 @@ export default function Template({ data }) {
   return (
     <Layout>
 
-      <Subscribe/>
+      <Subscribe slug={frontmatter.path} />
 
       <SEO title={frontmatter.title} />
       <div className="event-post">

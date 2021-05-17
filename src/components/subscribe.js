@@ -3,11 +3,34 @@ import React from "react"
 var os = require("os");
 var siteAddress = os.hostname();
 
-const Subscribe = ({ tag }) => (
+function getCalendarUrl(siteAddress, tag, slug) {
+  let calendarUrl = siteAddress 
+   
+  if(tag) {
+    calendarUrl += "/" + tag.toLowerCase().replace(" ", "-")
+  } else if(slug) {
+    calendarUrl += slug.slice(0, -1)
+  } else {
+    calendarUrl += "events"
+  }
+  return calendarUrl + ".ics"
+}
+
+function getCalendarTitle(tag, slug) {
+  if(tag) {
+    return tag + ' games'
+  } else if(slug) {
+    return 'this game'
+  } else {
+    return 'all games'
+  }
+}
+
+const Subscribe = ({ tag, slug }) => (
   <div>
   		<p>
         <span role="img" aria-label="Spiral calendar">🗓</span> 
-        <a href={"webcal://" + siteAddress + "/" + (tag ? tag.toLowerCase().replace(" ", "-") : "events") + ".ics"} className="ics">Subscribe to {tag || "all"} games in iOS, MacOS and Office</a>
+        <a href={ "webcal://" + getCalendarUrl(siteAddress, tag, slug) } className="ics">Subscribe to { getCalendarTitle(tag, slug) } in iOS, MacOS and Office</a>
         <small
           style={{
             display: `block`,
