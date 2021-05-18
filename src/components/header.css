@@ -1,3 +1,7 @@
+header {
+    background: rgba(0,0,0,0.8);
+}
+
 header h1 {
     padding: 2rem 0;
     margin-bottom: 0;
