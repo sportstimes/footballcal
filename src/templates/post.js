@@ -19,15 +19,15 @@ export default function Template({ data }) {
   return (
     <Layout>
 
-      <Subscribe slug={frontmatter.path} />
-
       <SEO title={frontmatter.title} />
       <div className="event-post">
+        <p className="competition">Euro 2020</p>
         <h1>{frontmatter.title}</h1>
-        <h2>When?</h2>
-          <p className="date">{Moment(frontmatter.date).format("dddd DD MMMM YYYY")}</p>
+        <div className="datetime">
+          <p className="date">{Moment(frontmatter.date).format("ddd DD MMM")}</p>
           <p className="time">
-            {Moment(frontmatter.date).format("h:mma") + (frontmatter.endDate ? "–" + Moment(frontmatter.endDate).format("h:mma") : "") }
+            {Moment(frontmatter.date).format("h:mma")}
+            <span className="endtime">{(frontmatter.endDate ? "–" + Moment(frontmatter.endDate).format("h:mma") : "") }</span>
           </p>
           { 
           timeStatus === 'unconfirmed' ? 
@@ -36,6 +36,8 @@ export default function Template({ data }) {
           ) : ''
           }          
           {LocalTimezone}
+        </div>
+        <Subscribe slug={frontmatter.path} />
         <h2>Where?</h2>
         <p>{frontmatter.locationName}</p>
 
