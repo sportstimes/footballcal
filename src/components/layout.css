@@ -202,8 +202,9 @@ html {
   box-sizing: inherit;
 }
 body {
-  text-align: center;
-  background: rgb(235, 255, 235);
+  text-align: left;
+  background-color: #D55A5A;
+  background-image: -webkit-linear-gradient(-30deg, #D55A5A 50%, #135A94 50%);
   color: rgba(30, 30, 30, 0.8);
   font-family: Helvetica, sans-serif;
   font-weight: normal;
@@ -219,11 +220,14 @@ img {
   margin: 0;
   padding: 0;
 }
+main {
+  min-height: 80vh;
+}
 footer {
   text-align: justify;
   font-size: 0.85rem;
   opacity: 0.4;
-  margin: 5rem 0 0;
+  margin: 6rem 0;
 }
 
 h1,
@@ -580,20 +584,23 @@ ul.competitions li {
 #content {
   color: #FFF;
   background-origin: fixed;
-  background-color: #D55A5A;
-  background-image: -webkit-linear-gradient(-30deg, #D55A5A 50%, #135A94 50%);
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1rem 1.45rem;
 }
 
 #content h1 {
   font-size: 80px;
   border-top: 8px solid #FFF;
   padding-top: 20px;
+  text-align: center;
 }
 
 #content .competition,
 #content .datetime {  
   border-top: 8px solid #FFF;
   padding-top: 20px;
+  text-align: center;
   text-transform: uppercase;
   font-size: 2rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;

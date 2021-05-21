@@ -1,5 +1,7 @@
 header {
-    background: rgba(0,0,0,0.8);
+    max-width: 960px;
+    padding: 0 1rem;
+    margin: 0 auto;
 }
 
 header h1 {
