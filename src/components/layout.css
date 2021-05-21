@@ -568,6 +568,9 @@ pre tt:after {
   }
 }
 
+ul.inline {
+  margin: 0;
+}
 ul.inline li {
   display: inline-block;
   list-style: none;

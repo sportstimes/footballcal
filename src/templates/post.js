@@ -56,8 +56,7 @@ export default function Template({ data }) {
           </li>
           )) : ''
         }
-        <li><Link to="/"><span role="img" aria-label="Spiral calendar">📅</span>
-          All games</Link></li>
+        <li><Link to="/">All games</Link></li>
         </ul>
 
       </div>
