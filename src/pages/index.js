@@ -9,13 +9,15 @@ const IndexPage = () => {
 
   return (
     <Layout>
-
-
       <SEO title="All Competitions" />
-      <h1>Competitions</h1>
-
+      <h1>Football games in your calendar</h1>
+      <p>
+        Never miss another football game by subscribing to our calendars in your favourite app. 
+        <Link to="/about">Find out more</Link>
+      </p>
       <Subscribe/>
-      <ul className="competitions">
+      <h2>Available Competitions</h2>
+      <ul className="inline competitions">
         <li>
           <Link to="/euro-2020/">
             <h2>EURO 2020</h2>
@@ -23,7 +25,7 @@ const IndexPage = () => {
           </Link>
         </li>
       </ul>
-
+      <p>More competitions coming soon…</p>
      </Layout>
   )
 }
