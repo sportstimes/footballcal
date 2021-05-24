@@ -599,8 +599,8 @@ ul.competitions li {
   text-align: center;
 }
 
-#content .competition,
-#content .datetime {  
+.event-post .competition,
+.event-post .datetime {  
   border-top: 8px solid #FFF;
   padding-top: 20px;
   text-align: center;
@@ -608,17 +608,17 @@ ul.competitions li {
   font-size: 2rem;
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-#content .competition {
+.event-post .competition {
   letter-spacing: 1rem;
 }
-#content .datetime {  
+.event-post .datetime {  
   display: flex;
   flex-wrap: nowrap;
 }
-#content .datetime p {
+.event-post .datetime p {
   width: 50%;
   text-align: center;
 }
-#content .datetime p .endtime {
+.event-post .datetime p .endtime {
   display: none;
 }
