@@ -29,7 +29,8 @@ const IndexPage = ({
       <table>
         <thead>
           <tr>
-            <th>When</th>
+            <th>Day</th>
+            <th>Time</th>
             <th>Summary</th>
           </tr>
         </thead>
