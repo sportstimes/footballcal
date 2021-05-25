@@ -1,5 +1,7 @@
 //import { Link } from "gatsby"
 import React from "react"
+import "./subscribe.css"
+
 var os = require("os");
 var siteAddress = os.hostname();
 
@@ -27,21 +29,13 @@ function getCalendarTitle(tag, slug) {
 }
 
 const Subscribe = ({ tag, slug }) => (
-  <div>
-  		<p>
-        <span role="img" aria-label="Spiral calendar">🗓</span> 
-        <a href={ "webcal://" + getCalendarUrl(siteAddress, tag, slug) } className="ics">Subscribe to { getCalendarTitle(tag, slug) } in iOS, MacOS and Office</a>
-        <small
-          style={{
-            display: `block`,
-          }}
-        >
-          or 
-          {` `}
-          <a href="https://support.google.com/calendar/answer/37100?hl=en">Google Calendar</a>
-        </small>      
-      </p>
-  </div>
+  <p className="subscribe">
+    <a href={ "webcal://" + getCalendarUrl(siteAddress, tag, slug) }>
+      <span role="img" aria-label="Spiral calendar">🗓</span> 
+      <span>Add { getCalendarTitle(tag, slug) } to your calendar</span>
+      <small>in iOS, MacOS and Office</small>      
+    </a>
+  </p>
 )
 
 export default Subscribe

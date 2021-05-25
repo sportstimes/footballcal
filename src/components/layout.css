@@ -202,8 +202,9 @@ html {
   box-sizing: inherit;
 }
 body {
-  text-align: center;
-  background: rgb(235, 255, 235);
+  text-align: left;
+  background-color: #D55A5A;
+  background-image: -webkit-linear-gradient(-30deg, #D55A5A 50%, #135A94 50%);
   color: rgba(30, 30, 30, 0.8);
   font-family: Helvetica, sans-serif;
   font-weight: normal;
@@ -216,20 +217,17 @@ body {
 }
 img {
   max-width: 100%;
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
+  margin: 0;
+  padding: 0;
+}
+main {
+  min-height: 80vh;
 }
 footer {
   text-align: justify;
-  font-size: 0.85rem;
+  font-size: 0.75rem;
   opacity: 0.4;
-  margin: 5rem 0 0;
+  margin: 5rem 0;
 }
 
 h1,
@@ -238,7 +236,7 @@ h3,
 h4,
 h5 {
   color: inherit;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: 'DIN Condensed Bold', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   text-transform: uppercase;
   font-weight: bold;
   line-height: 1.1;
@@ -570,6 +568,9 @@ pre tt:after {
   }
 }
 
+ul.inline {
+  margin: 0;
+}
 ul.inline li {
   display: inline-block;
   list-style: none;
@@ -581,4 +582,43 @@ ul.competitions li {
   margin: 0 1rem 1rem 0;
   background: rgba(0,0,0,0.1);
   padding: 3rem 1rem;
+}
+
+#content {
+  color: #FFF;
+  background-origin: fixed;
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 0 1rem 1.45rem;
+}
+
+#content h1 {
+  font-size: 80px;
+  border-top: 8px solid #FFF;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.event-post .competition,
+.event-post .datetime {  
+  border-top: 8px solid #FFF;
+  padding-top: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.event-post .competition {
+  letter-spacing: 1rem;
+}
+.event-post .datetime {  
+  display: flex;
+  flex-wrap: nowrap;
+}
+.event-post .datetime p {
+  width: 50%;
+  text-align: center;
+}
+.event-post .datetime p .endtime {
+  display: none;
 }

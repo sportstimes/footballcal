@@ -2,7 +2,7 @@ import { Link } from "gatsby"
 import React from "react"
 
 import "./header.css"
-import logo from "../static/football-cal-128.png"
+import logo from "../static/football-cal-white.png"
 
 const Header = ({ siteTitle }) => (
   <header>
