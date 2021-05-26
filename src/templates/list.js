@@ -16,7 +16,11 @@ const IndexPage = ({
 
   const Events = edges
     .filter(edge => !!edge.node.frontmatter.date) // You can filter your posts based on some criteria
-    .map(edge => <EventRow key={edge.node.id} post={edge.node} />)
+    .map( (edge, index) => 
+      <EventRow 
+        key={edge.node.id} 
+        post={edge.node} 
+        prevDay={ edges[index-1] ? edges[index-1].node.frontmatter.date : false } />)
   const listHeader = `${tag} games`
   
   return (

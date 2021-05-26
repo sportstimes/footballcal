@@ -4,10 +4,17 @@ import moment from "moment"
 
 import "./event-row.css"
 
-const EventRow = ({ post }) => (
+const EventRow = ({ post, prevDay }) => (
   <tr id={'Match' + post.id} className={ "vevent" }>
       <td className="datetime">
-        <span className="day">{moment(post.frontmatter.date).format("ddd DD MMM")}</span>
+        {
+        moment(prevDay).format("ddd DD MMM") !== moment(post.frontmatter.date).format("ddd DD MMM") ? (
+          <span className="day">
+            {moment(post.frontmatter.date).format("ddd DD MMM")}
+          </span>
+        )
+        : null 
+        }
         <time className="dtstart">
           {moment(post.frontmatter.date).format("YYYY-MM-DDTHH:mm:ssZ")}
         </time>
