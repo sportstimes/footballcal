@@ -32,7 +32,13 @@ const Layout = ({ children }) => {
           <ul className="inline">
             <li><Link to="/about">About</Link></li>
           </ul>
-          <p id="Credits">© {new Date().getFullYear()}. Built with 💪 using <a href="https://github.com/sportstimes/gatsby-template/">The Sports Times</a>. Developed by <a href="https://sijobling.com/">Si Jobling</a>. Hosted on <a href="https://netlify.com/">Netlify</a>.</p>
+          <p id="Credits">
+            © {new Date().getFullYear()} Football Cal. 
+            All football trademarks are copyright to respective owners. 
+            Built with <a href="https://github.com/sportstimes/footballcal/">The Sports Times</a>. 
+            Hosted on <a href="https://netlify.com/">Netlify</a>.
+            Developed by <a href="https://sijobling.com/">Si Jobling</a>. 
+          </p>
         </footer>
       </div>
     </div>
