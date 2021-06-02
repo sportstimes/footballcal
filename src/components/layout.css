@@ -622,3 +622,8 @@ ul.competitions li {
 .event-post .datetime p .endtime {
   display: none;
 }
+
+.no-bullets {
+  list-style: none;
+  margin: 0 0 1.45rem;
+}

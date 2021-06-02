@@ -7,7 +7,7 @@ const AboutPage = () => (
   <Layout>
     <SEO title="About" />
     <h2 id="Mission">Providing sports event data in open formats for easier consumption</h2>
-    <ul id="Goals">
+    <ul id="Goals" className="no-bullets">
       <li><span role="img" aria-label="Scales">⚖️</span> Democratise sports event data</li>
       <li><span role="img" aria-label="Scroll">📜</span> Establish reusable relevant standards</li>
       <li><span role="img" aria-label="Toolbox">🧰</span> Create applications for easy distribution of sports events</li>
