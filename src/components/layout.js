@@ -38,7 +38,7 @@ const Layout = ({ children }) => {
             Built with <a href="https://github.com/sportstimes/footballcal/">The Sports Times</a>. 
             Roadmap on <a href="https://trello.com/invite/b/KYdByEKj/8ca5511ce5b058b6bbf0f7612636085d/football-cal-%E2%9A%BD%EF%B8%8F">Trello</a>.
             Hosted on <a href="https://netlify.com/">Netlify</a>.
-            Developed by <a href="https://sijobling.com/">Si Jobling</a>. 
+            <a href="https://www.buymeacoffee.com/si">Buy Si a beer 🍺</a>. 
           </p>
         </footer>
       </div>
