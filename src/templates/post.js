@@ -37,9 +37,19 @@ export default function Template({ data }) {
           }          
           {LocalTimezone}
         </div>
+
         <Subscribe slug={frontmatter.path} />
-        <h2>Where?</h2>
-        <p>{frontmatter.locationName}</p>
+
+        <table id="EventDetails">
+          <tr>
+            <th>Venue</th>
+            <th>TV</th>
+          </tr>
+          <tr>
+            <td>{frontmatter.locationName}</td>
+            <td>{frontmatter.tv || 'N/A'}</td>
+          </tr>
+        </table>
 
         <div
           className="blog-post-content"
@@ -75,6 +85,7 @@ export const pageQuery = graphql`
         title
         locationName
         tags
+        tv
       }
     }
   }
