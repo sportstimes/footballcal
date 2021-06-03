@@ -47,7 +47,14 @@ export default function Template({ data }) {
           </tr>
           <tr>
             <td>{frontmatter.locationName}</td>
-            <td>{frontmatter.tv || 'N/A'}</td>
+            <td className="tv-channels">
+            { 
+              frontmatter.tv ? 
+              frontmatter.tv.map(tvChannel => (
+                <span key={tvChannel}>{tvChannel}</span>
+              )) : ''
+            }
+            </td>
           </tr>
         </table>
 
