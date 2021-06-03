@@ -645,3 +645,7 @@ ul.competitions li {
   border-bottom: none;
   white-space: nowrap;
 }
+
+.tv-channels span {
+  margin: 0 0.5rem;
+}
