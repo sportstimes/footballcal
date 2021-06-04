@@ -9,8 +9,12 @@ import React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql, Link } from "gatsby"
 
+import favicon from '../static/footballcal-32.png'
+import Helmet from 'react-helmet'
+
 import Header from "./header"
 import "./layout.css"
+
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -25,6 +29,9 @@ const Layout = ({ children }) => {
 
   return (
     <div>
+      <Helmet>
+        <link rel="icon" href={favicon} />
+      </Helmet>
       <Header siteTitle={data.site.siteMetadata.title} />
       <div id="content">
         <main>{children}</main>
