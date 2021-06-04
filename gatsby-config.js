@@ -4,6 +4,11 @@ module.exports = {
     description: `Football dates and times direct to your calendar`,
     siteUrl: `https://footballcal.com`,
     author: `@si`,
+    social: {
+      twitter: 'https://twitter.com/@footballcalcom',
+      twitterUsername: '@footballcalcom',
+      github: 'https://github.com/sportstimes/footballcal',
+    },
   },
   plugins: [
   `gatsby-plugin-react-helmet`,
