@@ -54,6 +54,9 @@ const Layout = ({ children, type }) => {
         <meta property="og:image" content={imageUrl}></meta>
         <meta property="og:image:alt" content={data.site.siteMetadata.description}></meta>
         <meta property="og:type" content={type} />
+        <script async defer data-domain="footballcal.com" src="https://plausible.io/js/plausible.js"></script>
+
+
       </Helmet>
       
       <Header siteTitle={data.site.siteMetadata.title} />
@@ -69,7 +72,7 @@ const Layout = ({ children, type }) => {
             Built with <a href="https://github.com/sportstimes/footballcal/">The Sports Times</a>. 
             Roadmap on <a href="https://trello.com/invite/b/KYdByEKj/8ca5511ce5b058b6bbf0f7612636085d/football-cal-%E2%9A%BD%EF%B8%8F">Trello</a>.
             Hosted on <a href="https://netlify.com/">Netlify</a>.
-            <a href="https://www.buymeacoffee.com/si" className="button">Buy Si a beer 🍺</a>. 
+            <a href="https://www.buymeacoffee.com/si" className="button">Buy Si a beer <span role="img" aria-label="beer">🍺</span></a>. 
           </p>
         </footer>
       </div>
