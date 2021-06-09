@@ -13,7 +13,7 @@ function getCalendarUrl(siteAddress, tag, slug) {
   } else if(slug) {
     calendarUrl += slug.slice(0, -1)
   } else {
-    calendarUrl += "events"
+    calendarUrl += "/events"
   }
   return calendarUrl + ".ics"
 }
