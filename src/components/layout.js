@@ -72,6 +72,7 @@ const Layout = ({ children, type }) => {
             Built with <a href="https://github.com/sportstimes/footballcal/">The Sports Times</a>. 
             Roadmap on <a href="https://trello.com/invite/b/KYdByEKj/8ca5511ce5b058b6bbf0f7612636085d/football-cal-%E2%9A%BD%EF%B8%8F">Trello</a>.
             Hosted on <a href="https://netlify.com/">Netlify</a>.
+            Analytics on <a href="https://plausible.io/footballcal.com">Plausible</a>.
             <a href="https://www.buymeacoffee.com/si" className="button">Buy Si a beer <span role="img" aria-label="beer">🍺</span></a>. 
           </p>
         </footer>
