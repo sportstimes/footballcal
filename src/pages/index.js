@@ -9,8 +9,8 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="All Competitions" />
-      <h1>Football games in your calendar</h1>
+      <SEO title="Football times in your calendar" />
+      <h1>Football times in your calendar</h1>
       <p className="hero">
         Never miss another football game by subscribing to our calendars in your favourite app. 
         <Link to="/about">Find out more</Link>
