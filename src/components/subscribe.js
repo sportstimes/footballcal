@@ -6,7 +6,7 @@ var os = require("os");
 var siteAddress = os.hostname();
 
 function getCalendarUrl(siteAddress, tag, slug) {
-  let calendarUrl = siteAddress 
+  let calendarUrl = 'footballcal.com' // TODO: Fix to be dynamic for feature branches
    
   if(tag) {
     calendarUrl += "/" + tag.toLowerCase().replace(" ", "-")
