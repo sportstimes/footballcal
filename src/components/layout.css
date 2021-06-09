@@ -649,3 +649,8 @@ ul.competitions li {
 .tv-channels span {
   margin: 0 0.5rem;
 }
+
+.holding {
+  color: rgba(255,255,255,0.5);
+  padding: 1rem 0;
+}

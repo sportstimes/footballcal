@@ -25,7 +25,7 @@ const IndexPage = () => {
           </Link>
         </li>
       </ul>
-      <p>More competitions coming soon…</p>
+      <p className="holding"><em>More competitions coming soon…</em></p>
      </Layout>
   )
 }
