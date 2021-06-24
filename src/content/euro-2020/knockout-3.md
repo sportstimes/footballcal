@@ -1,10 +1,10 @@
 ---
-title: Group C 1st v Group D/E/F 3rd
+title: Netherlands v Czech Republic
 date: 2021-06-27T16:00Z
 endDate: 2021-06-27T17:50Z
 locationName: Budapest
 path: /euro-2020/knockout-3/
-tags: ["Budapest", "Group C", "Group D", "Group E", "Group F", "Knockout", "Group of 16", "EURO 2020"]
+tags: ["Netherlands", "Czech Republic", "Budapest", "Group C", "Group D", "Group E", "Group F", "Knockout", "Group of 16", "EURO 2020"]
 ---
 
-The 39th game of the (delayed) EURO 2020 competition between **Group C winners** and **Group D, E or F third place**.
+The 39th game of the (delayed) EURO 2020 competition between **Group C winners** [Netherlands](/netherlands) and **Group D third place** [Czech Republic](/czech-republic).
