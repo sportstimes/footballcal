@@ -624,6 +624,11 @@ ul.competitions li {
   display: none;
 }
 
+.event-post .blog-post-content {
+  margin-bottom: 5rem;
+}
+
+
 .no-bullets {
   list-style: none;
   margin: 0 0 1.45rem;
