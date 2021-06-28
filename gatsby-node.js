@@ -104,6 +104,7 @@ exports.onPostBuild = async ({ graphql }) => {
               endDate
               locationName
               tags
+              tv
             }
             fields {
               slug
@@ -129,10 +130,16 @@ exports.onPostBuild = async ({ graphql }) => {
     const ics = require(`ics`)
     
     result.data.event.edges.forEach(({ node }) => {
+
+      let description = node.excerpt
+      if(node.frontmatter.tv !== null) {
+        description =  'TV Channels: ' + node.frontmatter.tv + '\r\n' + '\r\n' + description
+      }
+
       let event = {
         start: moment(node.frontmatter.date).format('YYYY-M-D-H-m').split("-"),
         title: node.frontmatter.title,
-        description: node.excerpt,
+        description: description,
         location: node.frontmatter.locationName,
         url: result.data.siteMeta.siteMetadata.siteUrl + node.fields.slug,
         status: 'CONFIRMED',
