@@ -527,6 +527,10 @@ th {
   padding-top: 0.725rem;
   padding-bottom: calc(0.725rem - 1px);
 }
+th {
+  color: rgba(255,255,255,0.3);
+  border-bottom: 3px solid rgba(255,255,255,0.3);
+}
 th:first-child,
 td:first-child {
   padding-left: 0;
