@@ -136,8 +136,13 @@ exports.onPostBuild = async ({ graphql }) => {
         description =  'TV Channels: ' + node.frontmatter.tv + '\r\n' + '\r\n' + description
       }
 
+      let dateToArray = function(date) {
+        let array = moment(date).format('YYYY-M-D-H-m').split("-");
+        return array.map(x => parseInt(x));
+      }
+
       let event = {
-        start: moment(node.frontmatter.date).format('YYYY-M-D-H-m').split("-"),
+        start: dateToArray(node.frontmatter.date),
         title: node.frontmatter.title,
         description: description,
         location: node.frontmatter.locationName,
@@ -146,7 +151,7 @@ exports.onPostBuild = async ({ graphql }) => {
         categories: node.frontmatter.tags
       }
       if(node.frontmatter.endDate) {
-        event.end = moment(node.frontmatter.endDate).format('YYYY-M-D-H-m').split("-")
+        event.end = dateToArray(node.frontmatter.endDate)
       } else {
         event.duration = { hours: 1, minutes: 0 }
       }
