@@ -26,6 +26,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@types/node": "^17.0.30",
     "prettier": "^1.18.2"
   },
   "keywords": [
