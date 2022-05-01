@@ -16,7 +16,7 @@
     "gatsby-plugin-robots-txt": "^1.6.2",
     "gatsby-plugin-sharp": "^4.13.0",
     "gatsby-source-filesystem": "^4.13.0",
-    "gatsby-transformer-remark": "^2.6.10",
+    "gatsby-transformer-remark": "^5.13.0",
     "gatsby-transformer-sharp": "^2.2.5",
     "ics": "^2.16.0",
     "prop-types": "^15.7.2",
