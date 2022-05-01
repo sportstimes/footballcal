@@ -3,8 +3,6 @@ import JSONData from "../content/bbc-world-cup-data.json"
 
 import moment from "moment"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
-import Subscribe from "../components/subscribe"
 
 const events = Object.values(JSONData.payload[0].body.matchData[0].tournamentDatesWithEvents).flatMap(event => event.map(subEvent => subEvent.events)).flatMap(event => event).map(event => (
   {
