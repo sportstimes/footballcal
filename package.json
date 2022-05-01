@@ -6,7 +6,7 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "gatsby": "^4.13.1",
-    "gatsby-plugin-csv-feed": "^1.1.2",
+    "gatsby-plugin-csv-feed": "^4.0.1",
     "gatsby-plugin-feed": "^2.3.6",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-json-output": "^1.1.0",
