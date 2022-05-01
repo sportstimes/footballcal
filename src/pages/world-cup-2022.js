@@ -1,6 +1,8 @@
 import React from "react"
 import JSONData from "../content/bbc-world-cup-data.json"
 
+import moment from "moment"
+
 const events = Object.values(JSONData.payload[0].body.matchData[0].tournamentDatesWithEvents).flatMap(event => event.map(subEvent => subEvent.events)).flatMap(event => event).map(event => (
   {
       startTime: event.startTime, 
@@ -26,17 +28,37 @@ const WorldCup2022 = () => (
 
   <div>
     <h1>{ JSONData.payload[0].body.matchData[0].tournamentMeta.tournamentName.full}</h1>
-    <ol>
+    <table>
 
     {
       
       events.map((event, index) => {
-        return <li key={`content_item_${index}`}>{event.homeTeam + ' v ' + event.awayTeam}</li>
+        return <tr key={`content_item_${index}`}>
+          <td className="datetime">
+            {
+            //moment(prevDay).format("ddd DD MMM") !== moment(event.startTime).format("ddd DD MMM") ? (
+              <span className="day">
+                {moment(event.startTime).format("ddd DD MMM")}
+              </span>
+            /*
+            )
+            : null 
+            */
+            }
+            <time className="dtstart">
+              {moment(event.startTime).format("YYYY-MM-DDTHH:mm:ssZ")}
+            </time>
+          </td>
+          <td className="time"><span>{moment(event.startTime).format("H:mm")}</span></td>
+          <td className="summary">
+            {event.homeTeam + ' v ' + event.awayTeam}
+          </td>
+        </tr>
         
       })
       
     }
-    </ol>
+    </table>
   </div>
 )
 export default WorldCup2022
