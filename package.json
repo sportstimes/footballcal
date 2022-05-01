@@ -7,7 +7,7 @@
   "dependencies": {
     "gatsby": "^4.13.1",
     "gatsby-plugin-csv-feed": "^4.0.1",
-    "gatsby-plugin-feed": "^2.3.6",
+    "gatsby-plugin-feed": "^4.13.0",
     "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-json-output": "^1.1.0",
     "gatsby-plugin-manifest": "^2.2.4",
