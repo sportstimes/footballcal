@@ -179,6 +179,50 @@ exports.onPostBuild = async ({ graphql }) => {
 
     })
 
+    const WorldCupJSONData = require('./src/content/bbc-world-cup-data.json');
+    
+    const WorldCupEvents = Object.values(WorldCupJSONData.payload[0].body.matchData[0].tournamentDatesWithEvents).flatMap(event => event.map(subEvent => subEvent.events)).flatMap(event => event).map(event => (
+      {
+        startTime: event.startTime, 
+        homeTeam: event.homeTeam.name.full, 
+        awayTeam: event.awayTeam.name.full, 
+        venue: event.venue.name.full
+      }
+    ))
+      
+    console.log('⚽️ Generating World Cup ICS from JSON…', WorldCupEvents.length );
+
+    WorldCupEvents.forEach( ( item ) => {
+
+      let dateToArray = function(date) {
+        let array = moment(date).format('YYYY-M-D-H-m').split("-");
+        return array.map(x => parseInt(x));
+      }
+
+      let slug = `${_.kebabCase(item.homeTeam + ' ' + item.awayTeam)}`
+      
+      let event = {
+        start: dateToArray(item.startTime),
+        title: item.homeTeam + ' v ' + item.awayTeam,
+        description: '[insert description]',
+        location: item.venue,
+        url: 'https://footballcal.com/world-cup-2022/' + slug,
+        status: 'CONFIRMED',
+        duration: { hours: 2, minutes: 0 }
+      }
+      events.push(event);
+
+      ics.createEvent(event, (error, value) => {
+        if (error) {
+          console.log(error)
+          throw new Error("ICS generation fail, see console output above")
+        }
+        
+        let filename = `/${slug}.ics`
+        writeFileSync(`${__dirname}/public` + filename, value)
+        console.log(filename + ` created`)
+      })
+    })
 
     console.log('Generating global ICS…');
     ics.createEvents(events, (error, value) => {
