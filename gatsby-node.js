@@ -206,7 +206,7 @@ exports.onPostBuild = async ({ graphql }) => {
       let event = {
         start: dateToArray(item.startTime),
         title: item.homeTeam + ' v ' + item.awayTeam,
-        description: competitionName,
+        description: competitionName + ' game between ' + item.homeTeam + ' and ' + item.awayTeam,
         location: item.venue,
         url: 'https://footballcal.com/world-cup-2022/' + slug,
         status: 'CONFIRMED',
