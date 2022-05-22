@@ -2,10 +2,7 @@
 import React from "react"
 import "./subscribe.css"
 
-var os = require("os");
-var siteAddress = os.hostname();
-
-function getCalendarUrl(siteAddress, tag, slug) {
+function getCalendarUrl(tag, slug) {
   let calendarUrl = 'footballcal.com' // TODO: Fix to be dynamic for feature branches
    
   if(tag) {
@@ -30,7 +27,7 @@ function getCalendarTitle(tag, slug) {
 
 const Subscribe = ({ tag, slug }) => (
   <p className="subscribe">
-    <a href={ "webcal://" + getCalendarUrl(siteAddress, tag, slug) }>
+    <a href={ "webcal://" + getCalendarUrl(tag, slug) }>
       <span role="img" aria-label="Spiral calendar">🗓</span> 
       <span>Add { getCalendarTitle(tag, slug) } to your calendar</span>
       <small>in iOS, MacOS and Office</small>      

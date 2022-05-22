@@ -69,6 +69,7 @@ module.exports = {
       `,
       feeds: [
         {
+          title: 'Football Cal',
           serialize: ({ query: { site, allMarkdownRemark } }) => {
             return allMarkdownRemark.edges.map(edge => {
               return Object.assign({}, edge.node.frontmatter, {

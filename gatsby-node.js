@@ -136,8 +136,13 @@ exports.onPostBuild = async ({ graphql }) => {
         description =  'TV Channels: ' + node.frontmatter.tv + '\r\n' + '\r\n' + description
       }
 
+      let dateToArray = function(date) {
+        let array = moment(date).format('YYYY-M-D-H-m').split("-");
+        return array.map(x => parseInt(x));
+      }
+
       let event = {
-        start: moment(node.frontmatter.date).format('YYYY-M-D-H-m').split("-"),
+        start: dateToArray(node.frontmatter.date),
         title: node.frontmatter.title,
         description: description,
         location: node.frontmatter.locationName,
@@ -146,7 +151,7 @@ exports.onPostBuild = async ({ graphql }) => {
         categories: node.frontmatter.tags
       }
       if(node.frontmatter.endDate) {
-        event.end = moment(node.frontmatter.endDate).format('YYYY-M-D-H-m').split("-")
+        event.end = dateToArray(node.frontmatter.endDate)
       } else {
         event.duration = { hours: 1, minutes: 0 }
       }
@@ -174,6 +179,59 @@ exports.onPostBuild = async ({ graphql }) => {
 
     })
 
+    const WorldCupJSONData = require('./src/content/bbc-world-cup-data.json');
+    
+    const WorldCupEvents = Object.values(WorldCupJSONData.payload[0].body.matchData[0].tournamentDatesWithEvents).flatMap(event => event.map(subEvent => subEvent.events)).flatMap(event => event).map(event => (
+      {
+        startTime: event.startTime, 
+        homeTeam: event.homeTeam.name.full, 
+        awayTeam: event.awayTeam.name.full, 
+        venue: event.venue.name.full
+      }
+    ))
+
+    const competitionName = 'FIFA World Cup 2022';
+      
+    console.log('⚽️ Generating World Cup ICS from JSON…', WorldCupEvents.length );
+
+    WorldCupEvents.forEach( ( item ) => {
+
+      let dateToArray = function(date) {
+        let array = moment(date).format('YYYY-M-D-H-m').split("-");
+        return array.map(x => parseInt(x));
+      }
+
+      let slug = `${_.kebabCase(item.homeTeam + ' ' + item.awayTeam)}`
+      
+      let event = {
+        start: dateToArray(item.startTime),
+        title: item.homeTeam + ' v ' + item.awayTeam,
+        description: competitionName + ' game between ' + item.homeTeam + ' and ' + item.awayTeam,
+        location: item.venue,
+        url: 'https://footballcal.com/world-cup-2022/' + slug,
+        status: 'CONFIRMED',
+        duration: { hours: 2, minutes: 0 }
+      }
+      events.push(event);
+
+      if(!tagEvents['World Cup 2022']) {
+        tagEvents['World Cup 2022'] = [event]
+      } else {
+        tagEvents['World Cup 2022'] = [...tagEvents['World Cup 2022'], event]
+      }
+      
+      ics.createEvent(event, (error, value) => {
+        if (error) {
+          console.log(error)
+          throw new Error("ICS generation fail, see console output above")
+        }
+        
+        let filename = `/${slug}.ics`
+        writeFileSync(`${__dirname}/public` + filename, value)
+        console.log(filename + ` created`)
+      })
+
+    })
 
     console.log('Generating global ICS…');
     ics.createEvents(events, (error, value) => {
@@ -194,7 +252,7 @@ exports.onPostBuild = async ({ graphql }) => {
           throw new Error("ICS generation fail, see console output above")
         }
         
-        let filename = tagName.toLowerCase().replace(' ','-')
+        let filename = `${_.kebabCase(tagName)}`;
         
         writeFileSync(`${__dirname}/public/` + filename + `.ics`, value)
         console.log(filename + `.ics created`)
