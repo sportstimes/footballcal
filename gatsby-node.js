@@ -214,6 +214,12 @@ exports.onPostBuild = async ({ graphql }) => {
       }
       events.push(event);
 
+      if(!tagEvents['World Cup 2022']) {
+        tagEvents['World Cup 2022'] = [event]
+      } else {
+        tagEvents['World Cup 2022'] = [...tagEvents['World Cup 2022'], event]
+      }
+      
       ics.createEvent(event, (error, value) => {
         if (error) {
           console.log(error)
@@ -224,6 +230,7 @@ exports.onPostBuild = async ({ graphql }) => {
         writeFileSync(`${__dirname}/public` + filename, value)
         console.log(filename + ` created`)
       })
+
     })
 
     console.log('Generating global ICS…');
@@ -245,7 +252,7 @@ exports.onPostBuild = async ({ graphql }) => {
           throw new Error("ICS generation fail, see console output above")
         }
         
-        let filename = tagName.toLowerCase().replace(' ','-')
+        let filename = `${_.kebabCase(tagName)}`;
         
         writeFileSync(`${__dirname}/public/` + filename + `.ics`, value)
         console.log(filename + `.ics created`)
