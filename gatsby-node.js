@@ -189,6 +189,8 @@ exports.onPostBuild = async ({ graphql }) => {
         venue: event.venue.name.full
       }
     ))
+
+    const competitionName = 'FIFA World Cup 2022';
       
     console.log('⚽️ Generating World Cup ICS from JSON…', WorldCupEvents.length );
 
@@ -204,7 +206,7 @@ exports.onPostBuild = async ({ graphql }) => {
       let event = {
         start: dateToArray(item.startTime),
         title: item.homeTeam + ' v ' + item.awayTeam,
-        description: '[insert description]',
+        description: competitionName,
         location: item.venue,
         url: 'https://footballcal.com/world-cup-2022/' + slug,
         status: 'CONFIRMED',
