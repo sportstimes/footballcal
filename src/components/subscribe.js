@@ -6,7 +6,7 @@ function getCalendarUrl(tag, slug) {
   let calendarUrl = 'footballcal.com' // TODO: Fix to be dynamic for feature branches
    
   if(tag) {
-    calendarUrl += "/" + tag.toLowerCase().replace(" ", "-")
+    calendarUrl += "/" + tag.toLowerCase().replace(/ /g, "-")
   } else if(slug) {
     calendarUrl += slug.slice(0, -1)
   } else {

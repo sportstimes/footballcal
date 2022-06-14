@@ -3,6 +3,9 @@ import JSONData from "../content/bbc-world-cup-data.json"
 
 import moment from "moment"
 import Layout from "../components/layout"
+import SEO from "../components/seo"
+
+import Subscribe from "../components/subscribe"
 
 const events = Object.values(JSONData.payload[0].body.matchData[0].tournamentDatesWithEvents).flatMap(event => event.map(subEvent => subEvent.events)).flatMap(event => event).map(event => (
   {
@@ -25,10 +28,18 @@ const events = Object.values(JSONData.payload[0].body.matchData[0].tournamentDat
 */
 
 
-const WorldCup2022 = () => (
+const WorldCup2022 = ({
+  pageContext
+}) => {
 
+  //const  pageTitle  = JSONData.payload[0].body.matchData[0].tournamentMeta.tournamentName.full
+  const tag = 'World Cup 2022'
+
+  return (
   <Layout>
-    <h1>{ JSONData.payload[0].body.matchData[0].tournamentMeta.tournamentName.full}</h1>
+    <h1>{ tag }</h1>
+    <SEO title={tag} />
+    <Subscribe tag={tag} />
     <table>
 
     {
@@ -62,4 +73,5 @@ const WorldCup2022 = () => (
     </table>
   </Layout>
 )
+}
 export default WorldCup2022
