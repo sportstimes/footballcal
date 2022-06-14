@@ -32,13 +32,14 @@ const WorldCup2022 = ({
   pageContext
 }) => {
 
-  const  pageTitle  = JSONData.payload[0].body.matchData[0].tournamentMeta.tournamentName.full
+  //const  pageTitle  = JSONData.payload[0].body.matchData[0].tournamentMeta.tournamentName.full
+  const tag = 'World Cup 2022'
 
   return (
   <Layout>
-    <h1>{ pageTitle }</h1>
-    <SEO title={pageTitle} />
-    <Subscribe tag={'World Cup 2022'} />
+    <h1>{ tag }</h1>
+    <SEO title={tag} />
+    <Subscribe tag={tag} />
     <table>
 
     {
