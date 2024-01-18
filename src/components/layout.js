@@ -55,8 +55,6 @@ const Layout = ({ children, type }) => {
         <meta property="og:image" content={data.site.siteMetadata.siteUrl + imageUrl}></meta>
         <meta property="og:image:alt" content={data.site.siteMetadata.description}></meta>
         <meta property="og:type" content={type} />
-        <script async defer data-domain="footballcal.com" src="https://plausible.io/js/plausible.js"></script>
-
       </Helmet>
       
       <Header siteTitle={data.site.siteMetadata.title} />
