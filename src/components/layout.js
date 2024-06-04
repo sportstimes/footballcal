@@ -55,6 +55,9 @@ const Layout = ({ children, type }) => {
         <meta property="og:image" content={data.site.siteMetadata.siteUrl + imageUrl}></meta>
         <meta property="og:image:alt" content={data.site.siteMetadata.description}></meta>
         <meta property="og:type" content={type} />
+
+        <script src="https://cdn.usefathom.com/script.js" data-spa="auto" data-site="SAJJHDRE" defer></script>
+              
       </Helmet>
       
       <Header siteTitle={data.site.siteMetadata.title} />
