@@ -12,7 +12,7 @@ import kebabCase from "lodash/kebabCase"
 
 export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark
+  const { frontmatter, html } = markdownRemark || ''
   const tags = frontmatter.tags 
   const timeStatus = frontmatter.timeStatus || ''
 
@@ -21,7 +21,6 @@ export default function Template({ data }) {
 
       <SEO title={frontmatter.title} />
       <div className="event-post">
-        <p className="competition">Euro 2020</p>
         <h1>{frontmatter.title}</h1>
         <div className="datetime">
           <p className="date">{Moment(frontmatter.date).format("ddd DD MMM")}</p>
