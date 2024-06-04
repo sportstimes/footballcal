@@ -13,7 +13,7 @@ import kebabCase from "lodash/kebabCase"
 export default function Template({ data }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark || ''
-  const tags = frontmatter.tags 
+  const tags = frontmatter.tags || ''
   const timeStatus = frontmatter.timeStatus || ''
 
   return (
