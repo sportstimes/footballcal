@@ -18,6 +18,12 @@ const IndexPage = () => {
       <Subscribe/>
       <h2>Available Competitions</h2>
       <ul className="inline competitions">
+      <li>
+          <Link to="/euro-2024/">
+            <h2>EURO 2024</h2>
+            <p>14 Jun–14 Jul 2024</p>
+          </Link>
+        </li>
         <li>
           <Link to="/euro-2020/">
             <h2>EURO 2020</h2>
@@ -25,7 +31,7 @@ const IndexPage = () => {
           </Link>
         </li>
       </ul>
-      <p className="holding"><em>More competitions coming soon…</em></p>
+      
      </Layout>
   )
 }
