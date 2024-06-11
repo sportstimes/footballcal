@@ -13,7 +13,7 @@ tags:
     "Group stages",
     "EURO 2024",
   ]
-tv: []
+tv: ["ITV"]
 ---
 
 The thirty-fifth game of the EURO 2024 competition between Group F competitors, Georgia and Portugal.

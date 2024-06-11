@@ -5,7 +5,7 @@ endDate: 2024-06-25T20:50Z
 locationName: Munich
 path: /euro-2024/denmark-serbia
 tags: ["Denmark", "Serbia", "Munich", "Group C", "Group stages", "EURO 2024"]
-tv: []
+tv: ["ITV4"]
 ---
 
 The thirty-second game of the EURO 2024 competition between Group C competitors, Denmark and Serbia.

@@ -6,7 +6,7 @@ locationName: Stuttgart
 path: /euro-2024/ukraine-belgium
 tags:
   ["Ukraine", "Belgium", "Stuttgart", "Group E", "Group stages", "EURO 2024"]
-tv: []
+tv: ["BBC"]
 ---
 
 The thirty-fourth game of the EURO 2024 competition between Group E competitors, Ukraine and Belgium.

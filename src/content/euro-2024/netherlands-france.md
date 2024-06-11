@@ -6,7 +6,7 @@ locationName: Leipzig
 path: /euro-2024/netherlands-france
 tags:
   ["Netherlands", "France", "Leipzig", "Group D", "Group stages", "EURO 2024"]
-tv: []
+tv: ["BBC1"]
 ---
 
-The twenty-first game of the EURO 2024 competition between Group D competitors, Netherlands v France.
+The twenty-first game of the EURO 2024 competition between Group D competitors, Netherlands and France.

@@ -13,7 +13,7 @@ tags:
     "Group stages",
     "EURO 2024",
   ]
-tv: []
+tv: ["BBC"]
 ---
 
 The twenty-fifth game of the EURO 2024 competition between Group A competitors, Switzerland and Germany.

@@ -6,7 +6,7 @@ locationName: Berlin
 path: /euro-2024/netherlands-austria
 tags:
   ["Netherlands", "Austria", "Berlin", "Group D", "Group stages", "EURO 2024"]
-tv: []
+tv: ["BBC"]
 ---
 
 The twenty-ninth game of the EURO 2024 competition between Group D competitors, Netherlands and Austria.

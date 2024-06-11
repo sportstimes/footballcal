@@ -13,7 +13,7 @@ tags:
     "Group stages",
     "EURO 2024",
   ]
-tv: []
+tv: ["BBC"]
 ---
 
 The thirty-third game of the EURO 2024 competition between Group E competitors, Slovakia and Romania.

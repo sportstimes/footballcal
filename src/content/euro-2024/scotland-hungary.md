@@ -6,7 +6,7 @@ locationName: Stuttgart
 path: /euro-2024/scotland-hungary
 tags:
   ["Scotland", "Hungary", "Stuttgart", "Group A", "Group stages", "EURO 2024"]
-tv: []
+tv: ["BBC1"]
 ---
 
 The twenty-sixth game of the EURO 2024 competition between Group A competitors, Scotland and Hungary.
