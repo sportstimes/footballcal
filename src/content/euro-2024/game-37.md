@@ -8,4 +8,4 @@ tags: ["Dortmund", "Group C", "Group A", "Round of 16", "EURO 2024"]
 tv: []
 ---
 
-The thirty-seventh game of the EURO 2024 competition between Group A winners and Group C runner-up.
+The thirty-seventh game of the EURO 2024 competition between Group A winners and Group C runners-up.
